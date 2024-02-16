@@ -140,26 +140,19 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1> Results</h1>
-	</div>
-	
-    lergy_count = 0;
-    var cold_count = 0;
+	  <script>
+        var allergy_count = 0;
+        var cold_count = 0; 
 
-    function allergyAdd() {
-        allergy_count = allergy_count + 1;
-    }
 
-    function coldAdd() {
-        cold_count = cold_count + 1;
-    }
+        function allergyAdd(){
+            allergy_count = allergy_count + 1;
+        }
 
-    function calculateResults() {
-        var totalQuestions = 4; // Update with the total number of questions
-        var allergyPercent = (allergy_count / totalQuestions) * 100;
-        var coldPercent = (cold_count / totalQuestions) * 100;
-
-        var resultText = document.getElementById("results");
-        resultText.innerHTML = "Probability it is allergies = " + allergyPercent.toFixed(2) + "%<b
+        function coldAdd(){
+            cold_count = cold_count + 1;
+        }
+  </script>
 
  </div><!-- /content -->
 
