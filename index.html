@@ -49,6 +49,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
         function coldAdd(){
             cold_count = cold_count + 1;
+	    alert(cold_count);
 	    console.log(cold_count);
 		
         }
@@ -56,7 +57,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function allergyPercent()[
 	let x = allergy_count;
 	let y= (x / 4)*100;
-	console log(y);
 	document.getElementById("allergyresults").innerHTML = "Probability it is allergies =" y + "%";
 
 	}
@@ -64,7 +64,6 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	function coldPercent(){
 		let a = cold_count;
 		let b = (a / 4)*100;
-		console.log(b);
 		document.getElementById("coldesults").innerHTML = "Probability it is a cold =" + b + "%";
 	}
 	
@@ -147,8 +146,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a sore throat?</p>
-		<a href="#four"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
-         	<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
+		<a href="#four"  onclick="coldAdd(0);" class="w3-btn w3-black">Yes</a>
+         	<a href="#four"  onclick="allergyAdd(0);" class="w3-btn w3-black">No</a>
 		<a href="#four" class="w3-btn w3-black"> Go to Page Four </a>
 	</div>
 </div>	
