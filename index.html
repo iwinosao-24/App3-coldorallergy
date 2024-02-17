@@ -67,7 +67,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		console.log(b);
 		document.getElementById("coldesults").innerHTML = "Probability it is a cold =" + b + "%";
 	}
- 
+	
+	var resultText = document.getElementById("results");
+ 	<p id="results"></p> tags with the innerHTML command like this:
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+
+	}
 	resultsPercent();
   </script>
 
@@ -164,8 +169,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 <div class="page" id="five">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
-		<p> id="results"></p>
-		<a href="#five" onclick="resultsPercent();">Recalculate Results</a>
+		<p id="results"></p>.  
+
     	</div>
 </div>
 	
