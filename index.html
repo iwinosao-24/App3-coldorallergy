@@ -57,8 +57,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		let y = cold_count;
 		var AllergyPercent = (x / 4) * 100;
 		var ColdPercent = (y / 4) * 100;
-	document.getElementById("results").innerHTML = 
-		"Probability it is allergies =" + AllergyPercent + "%" "<br> Probability it is a cold =" + ColdPercent + "%";
+	document.getElementById("results").innerHTML = "Probability it is allergies =" + AllergyPercent + "%" + "<br> Probability it is a cold =" + ColdPercent + "%";
 	}
 
   </script>
@@ -107,11 +106,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-	<p>Are your eyes watery or itchy?</p>    
+		<p>Are your eyes watery or itchy?</p>    
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
-
+</div>
 	
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
@@ -123,7 +122,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black"> Yes</a>
         <a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
  </div><!-- /content -->
-
+ </div>
+	
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
@@ -148,7 +148,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  </div><!-- /content -->
 		
 	<div class="page" id="five">
-	<div id= class="w3-container w3-flat-carrot">
+	<div id class="w3-container w3-flat-carrot">
 		<h1> Results</h1>
 		<p> id="results"></p>
 		<a href="#five"  onclick="resultsPercent();" class="w3-btn w3-black">Get Results</a>
