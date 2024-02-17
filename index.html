@@ -37,43 +37,31 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
         var allergy_count = 0;
-        var cold_count = 0;
+	var cold_count = 0;
 
 
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		alert(allergy_count);
-		console.log(allergy_count)
 
         }
 
         function coldAdd(){
             cold_count = cold_count + 1;
-	    alert(cold_count);
-	    console.log(cold_count);
-		
-        }
-
-	function allergyPercent(){
-	let x = allergy_count;
-	let y= (x / 4)*100;
-	document.getElementById("allergyresults").innerHTML = "Probability it is allergies =" y + "%";
-
+        
 	}
-	
-	function coldPercent(){
-		let a = cold_count;
-		let b = (a / 4)*100;
-		document.getElementById("coldresults").innerHTML = "Probability it is a cold =" + b + "%";
-	}
-	
+	//diplsaying results//
 	var resultText = document.getElementById("results");
- 	<p id="results"></p> tags with the innerHTML command like this:
-	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
-
+	
+	function resultsPercent() {
+		let x = allergy_count;
+		let y = cold_count;
+		var AllergyPercent = (x / 4) * 100;
+		var ColdPercent = (y / 4) * 100;
+	document.getElementById("results").innerHTML = "Probability it is allergies =" + AllergyPercent + "%" + "<br> Probability it is a cold =" + ColdPercent + "%";
 	}
-	resultsPercent();
  
+	resultsPercent();
 
 </script>
 
