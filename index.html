@@ -34,18 +34,20 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-
+//JavaScript section for counting responses and displaying results//
 <script>
         var allergy_count = 0;
 	var cold_count = 0;
+	//setting up variable//
 
-
+	//function to calculate allergy results//
         function allergyAdd(){
             allergy_count = allergy_count + 1;
 		//alert(allergy_count);
 
         }
 
+	//Function to calculate cold count//
         function coldAdd() {
             cold_count = cold_count + 1;
         	//alert(cold_count)
@@ -53,12 +55,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	}
 	
 	//diplsaying results//
-
+	//added variable part to make sure the allergy amd cold count are being identified/
   		function resultsPercent() {
 		var x = allergy_count;
 		var y = cold_count;
-		var allergyPercent = (x / 4) * 100;
-		var coldPercent = (y / 4) * 100;
+		var allergyPercent = (x / 4) * 100; //calculates allergy percent by totaling cold count and divding it by the total number of questions which is four//
+		var coldPercent = (y / 4) * 100; //calculates allergy percent by totaling allergy count and divding it by the total number of questions which is four//
 	
 		var resultText = document.getElementById("results");
 	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent;  
@@ -106,14 +108,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
 
-<div class="page" id="one">
+<div class="page" id="one"> //creating page initially//
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 1</h1>
 	</div>
 	
-    	<div id="content" class="w3-container">
+    	<div id="content" class="w3-container"> //button from doc//
         <p>Are your eyes watery or itchy?</p>    
-		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a> //creating choice buttons with function to take person to the next page while also calculating the results//
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
     	</div><!-- /content -->
 </div>
@@ -125,12 +127,12 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 	<div id="content" class="w3-container">
 	<p>Do you have a fever?</p>
-		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
+		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a> //had to switch the order of coldAdd and coldAllergy to correspond to the key in the doc//
          	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 	</div><!-- /content -->
 </div>	
 
-<div class="page" id="three">
+<div class="page" id="three"> //repeated code from page 2, changed numbers so user goes to page four and is not stuck on the same page//
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 3</h1>
 	</div>
@@ -142,7 +144,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div><!-- /content -->
 </div>	
 
-<div class="page" id="four">
+<div class="page" id="four"> //used code from page 1 because the key corresponds with allergyAdd first unlike in page 2 and 3//
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
 	</div>
@@ -154,7 +156,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     	</div><!-- /content -->
 </div>
 
-<div class="page" id="five">
+<div class="page" id="five">//used code from doc to caluclate results so it pulls forom code at the beginning with the variables//
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
 		<p id="results"></p>.  
