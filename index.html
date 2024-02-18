@@ -53,12 +53,13 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	//diplsaying results//
 	var resultText = document.getElementById("results");
 	
-	function resultsPercent() {
+	function resultsPercent(){
 		let x = allergy_count;
 		let y = cold_count;
 		var AllergyPercent = (x / 4) * 100;
 		var ColdPercent = (y / 4) * 100;
-	document.getElementById("results").innerHTML = "Probability it is allergies =" + AllergyPercent + "%" + "<br> Probability it is a cold =" + ColdPercent + "%";
+	resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
+	
 	}
  
 	resultsPercent();
@@ -113,7 +114,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#two"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
          	<a href="#two"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
 		<a href="#two" class="w3-btn w3-black"> Go to Page Two </a>
-    	</div>
+    	</div><!-- /content -->
 </div>
 
 <div class="page" id="two">
@@ -126,7 +127,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">Yes</a>
          	<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black">No</a>
 		<a href="#three" class="w3-btn w3-black"> Go to Page Three </a>	
-	</div>
+	</div><!-- /content -->
 </div>	
 
 <div class="page" id="three">
@@ -139,7 +140,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#four"  onclick="coldAdd(0);" class="w3-btn w3-black">Yes</a>
          	<a href="#four"  onclick="allergyAdd(0);" class="w3-btn w3-black">No</a>
 		<a href="#four" class="w3-btn w3-black"> Go to Page Four </a>
-	</div>
+	</div><!-- /content -->
 </div>	
 
 <div class="page" id="four">
@@ -152,7 +153,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#five"  onclick="allergyAdd();" class="w3-btn w3-black">Yes</a>
          	<a href="#five"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
 		<a href="#five" class="w3-btn w3-black"> Click for Results </a>
-    	</div>
+    	</div><!-- /content -->
 </div>
 
 <div class="page" id="five">
